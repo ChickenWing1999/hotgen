@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <title>Generator</title>
+        <title>Speedy Voucher Generator</title>
         <link href="genfolder/voucher.css" rel="stylesheet">
         <link href="genfolder/bootstrap.min.css" rel="stylesheet">
         <script src="genfolder/bootstrap.min.js"></script>
@@ -16,26 +16,26 @@
         <div
             class="px-3 container">
             <!--Title-->
-            <h1 class="fw-bold text-center">JuanFi Voucher Script Generator</h1>
-            <h6 class="text-center mt-3">Simple Voucher generator fo Juanfi System</h6>
+            <h1 class="fw-bold text-center">Speedy Voucher Script Generator</h1>
+            <h6 class="text-center mt-3">Custom and Modified MikroTik Hotspot Generator</h6>
             <form id="rst">
                 <div class="mb-3 rst">
-                    <label class="form-label" for="Vendo">Vendo Name</label>
-                    <input class="form-control reset" id="Vendo" placeholder="github@Kintoyyy" value="SPEEDY HOTSPOT" maxlength="14"></div>
+                    <label class="form-label" for="Vendo">Hotspot Name</label>
+                    <input class="form-control reset" id="Vendo" placeholder="Speedy Hotspot" value="SPEEDY HOTSPOT" maxlength="14"></div>
                 <div class="row">
                     <div class="col mb-3">
                         <label class="form-label" for="Prefix">Prefix<text class="text-danger">
-                                max 3 characters</text>
+                                Max 3 characters</text>
                         </label>
                         <input class="form-control" id="Prefix" placeholder="e.g. P5, P10, P20" maxlength="3"></div>
                     <div class="col">
                         <div class="row">
                             <div class="col-3">
-                                <label class="form-label" for="length">Voucher length</label>
+                                <label class="form-label" for="length">Voucher Length</label>
                                 <div class="col mb-3">
                                     <select aria-label="Default select" class="form-select" id="Length">
-                                        <option value="6" selected>6</option>
-                                        <option value="7">7</option>
+                                        <option value="6">6</option>
+                                        <option value="7" selected>7</option>
                                         <option value="8">8</option>
                                         <option value="9">9</option>
                                         <option value="10">10</option>
@@ -60,10 +60,8 @@
                                 <label class="form-label">Type</label>
                                 <div class="col">
                                     <div class="btn-group" role="group">
-                                        <input class='btn-check d-grid' id="userpass" type="radio" name="btnradio" autocomplete="off" checked>
-                                        <label class="btn btn-outline-secondary d-grid" for="userpass">user + pass</label>
-                                        <input class="btn-check" id="useronly" type="radio" name="btnradio" autocomplete="off">
-                                        <label class="btn btn-outline-secondary " for="useronly">user only</label>
+                                        <input class="btn-check" id="useronly" type="radio" name="btnradio" autocomplete="off" checked>
+                                        <label class="btn btn-outline-secondary" for="useronly">User Only</label>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +101,7 @@
                                     <label class="form-label" for="Data">Email Address<text class="text-danger">
                                             Required for Telegram Sales</text>
                                     </label>
-                                    <div class="col mb-3 "><input class="form-control" id="Data" placeholder="Data ( 1K 2M 4G ) " min="0" value="bots@juanfi.local"></div>
+                                    <div class="col mb-3 "><input class="form-control" id="Data" placeholder="bots@juanfi.local" min="0" value="bots@juanfi.local"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col mb-3 ">
@@ -118,14 +116,14 @@
                                         <input class="form-control" id="Server" placeholder="all" value="all"></div>
                                     <div class="col mb-3 ">
                                         <label class="form-label" for="Server">Hotspot IP<text class="text-warning">
-                                                For voucher printing</text>
+                                                For Voucher Printing</text>
                                         </label>
                                         <input class="form-control" id="ip" placeholder="10.0.0.1, juanfi.hotspot, hot.spot " value="10.0.0.1"></div>
                                 </div>
                             </form>
                             <div class="gap-2 d-grid ">
                                 <div class="d-flex gap-2 ">
-                                    <button class="col btn btn-secondary" data-bs-target="#infoModal" data-bs-toggle="modal">Infos</button>
+                                    <button class="col btn btn-secondary" data-bs-target="#infoModal" data-bs-toggle="modal">About</button>
                                     <button class="col btn btn-secondary" data-bs-target="#customize" data-bs-toggle="modal">Customize</button>
                                 </div>
                                 <button class="btn btn-success " onclick="Generate()" id="genTxt ">Generate</button>
@@ -148,7 +146,7 @@
                             </div>
                             <div class="mt-3">
                                 <div class="text-center align-self-center " id="crdts">Made by
-                                    <a href="https://kintoyyy.github.io/Me/" id="kintoyyy">kintoyyy ❤</a>
+                                    <a href="https://www.facebook.com/magararuuuu" id="speedy-hotspot">Speedy Hotspot ❤</a>
                                 </div>
                             </div>
                         </div>
@@ -159,20 +157,26 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Info version 1.3.3</h5>
+                                <h5 class="modal-title">Script Version 1.0.3</h5>
                                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body" id="modalprint">
-                                <li>Download rsc file</li>
-                                <li>Printing voucher will open in newtab</li>
-                                <li>Added Currency in total amount</li>
-                                <li>AutoCopy script on print</li>
+                                <li>Download .rsc file</li>
+                                <li>Printing voucher will open in new tab</li>
+                                <li>Added currency in total amount</li>
+                                <li>Auto copy script on print</li>
                                 <li class="text-danger">User + password QR is still not working</li><br>
                                 <p>Github:
-                                    <a href="https://github.com/Kintoyyy/JuanfiGenerator">Kintoyyy/JuanfiGenerator</a>
+                                    <a href="https://www.facebook.com/magararuuuu">SPEEDY HOTSPOT</a>
                                 </p>
-                                <p>Gcash:
-                                    <span class="fw-bold text-primary ">09760009422 Kent R.</span>
+                                <p>GCash :
+                                    <span class="fw-bold text-primary ">09686303490 E****A M.</span>
+                                </p>
+                                <p>PayMaya :
+                                    <span class="fw-bold text-primary ">09686303490 @bambiii</span>
+                                </p>
+                                <p>Load (Smart) :
+                                    <span class="fw-bold text-primary ">09686303490</span>
                                 </p>
                             </div>
                         </div>
@@ -197,7 +201,7 @@
                                                 <td style="font-weight:700;border-right:1px solid #000;background-color:#ffea8f " class="rotate" id="voucher1" rowspan="4">
                                                     <span>PHP 200</span>
                                                 </td>
-                                                <td style="font-weight:700" colspan="2">JuanFi Hotspot
+                                                <td style="font-weight:700" colspan="2">SPEEDY HOTSPOT
                                                     <d>
                                                         <tr>
                                                             <td style="width:100%;font-weight:700;font-size:18px;text-align:center">ABC1234</td>
@@ -265,6 +269,6 @@
                         <div id="PrintBody"></div>
                     </div>
                 </body>
-                <!--Made By Kent Rato -->
+                <!--Made by SPEEDY HOTSPOT -->
 
             </html>
